@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Banamex</title>
+</head>
+<font size="+2" color="#0066FF" face="Tahoma, Geneva, sans-serif">
+<p><h2>Deposito, Retiro, Donacion Consulta, Saldo, Salir </h2></p>
+<script language="javascript" type="text/javascript">
+<!--Se declara que todo el lenguage va hacer javascript-->
+var deposito, retiro,can, donacion, consulta, dep,ret,don,re,residuo ;
+can = 0 
+while(opcion="E")
+{
+opcion=prompt("ELEGIR OPCION: A:Depositar-B:Retirar-C:Donar-D:Consultar-E:Salir");
+switch(opcion)
+{
+case "A":
+deposito=prompt("Cuanto desea depositar");
+dep=parseInt(deposito)
+can = can+dep
+document.writeln('Usted a depositado un total de  $ ',dep,'<br>','<hr width="50%" align="left">');
+break;
+
+case "B":
+retiro=prompt("Cuanto desea retirar");
+ret=parseInt(retiro)
+residuo = ret % "100"
+
+if (ret > can)
+{
+document.writeln('No cuenta con saldo suficiente para realizar su retiro ','<br>','<hr width="50%" align="left">');
+}
+else if (residuo ==0 )
+{
+	can = can - ret
+	document.writeln('Usted a retirado  $ ',ret,'<br>','<hr width="50%" align="left">');
+document.writeln('Cuenta con  $ ',can,'<br>','<hr width="50%" align="left">');
+	}
+else
+{
+document.writeln('Imposible retirar  $ ',retiro,'  no es multiplo de 100','<br>','<hr width="50%" align="left">');
+}
+break;
+
+case "C":
+donar=prompt("Elegir el saldo que desea donar:  A:5-B:10-C:20-D:30-E:40-F:50-G:100");
+switch(donar)
+{
+case "A":
+don = "5"
+re=parseInt(don)
+if(can<re)
+{
+document.writeln('No cuenta con saldo suficiente para realizar la donacion que decea','<br>','<hr width="50%" align="left">');
+}
+else
+{
+can=can-re
+document.writeln('Usted a donado $ ',don,'<br>','<hr width="50%" align="left">');
+}
+
+break;
+
+case "B":
+don = "10"
+re=parseInt(don)
+if(can<re)
+{
+document.writeln('No cuenta con saldo suficiente para realizar la donacion que decea','<br>','<hr width="50%" align="left">');
+}
+else
+{
+can=can-re
+document.writeln('Usted a donado $ ',don,'<br>','<hr width="50%" align="left">');
+}
+
+break;
+
+case "C":
+don = "20"
+re=parseInt(don)
+if(can<re)
+{
+document.writeln('No cuenta con saldo suficiente para realizar la donacion que decea','<br>','<hr width="50%" align="left">');
+}
+else
+{
+can=can-re
+document.writeln('Usted a donado $ ',don,'<br>','<hr width="50%" align="left">');
+}
+
+break;
+
+case "D":
+don = "30"
+re=parseInt(don)
+if(can<re)
+{
+document.writeln('No cuenta con saldo suficiente para realizar la donacion que decea','<br>','<hr width="50%" align="left">');
+}
+else
+{
+can=can-re
+document.writeln('Usted a donado $ ',don,'<br>','<hr width="50%" align="left">');
+}
+
+break;
+
+case "E":
+don = "40"
+re=parseInt(don)
+if(can<re)
+{
+document.writeln('No cuenta con saldo suficiente para realizar la donacion que decea','<br>','<hr width="50%" align="left">');
+}
+else
+{
+can=can-re
+document.writeln('Usted a donado $ ',don,'<br>','<hr width="50%" align="left">');
+}
+
+break;
+
+case "F":
+don = "50"
+re=parseInt(don)
+if(can<re)
+{
+document.writeln('No cuenta con saldo suficiente para realizar la donacion que decea','<br>','<hr width="50%" align="left">');
+}
+else
+{
+can=can-re
+document.writeln('Usted a donado  $  ',don,'<br>','<hr width="50%" align="left">');
+}
+
+break;
+case "G":
+don = "100"
+re=parseInt(don)
+if(can<re)
+{
+document.writeln('No cuenta con saldo suficiente para realizar la donacion que decea','<br>','<hr width="50%" align="left">');
+}
+else
+{
+can=can-re
+document.writeln('Usted a donado $ ',don,'<br>','<hr width="50%" align="left">');
+}
+
+break;
+
+default:
+
+document.writeln(' No se puede realizar la operacion que usted quiere','<br>','<hr width="50%" align="left">');
+break;
+
+}
+case "D":
+can == can+dep
+document.writeln('Su saldo total es de $ ',can,'<br>','<hr width="50%" align="left">');
+break;
+case "E":
+document.writeln('Hasta luego regrese pronto que tenga un exelente dia!!!!','<br>','<hr width="50%" align="left">');
+End
+break;
+
+default:
+
+document.writeln('No se puede realizar su solicitud','<br>','<hr width="50%" align="left">');
+break;
+
+}
+}
+</script>
+
+
+<body>
+</body>
+</html>
